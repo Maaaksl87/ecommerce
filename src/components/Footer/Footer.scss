@@ -1,3 +1,71 @@
-.footer{
-    background-color: black;
-}
+.footer {
+    background-color: #431274;
+    padding: 20px 0;
+    width: 100%; /* Розтягнути футер на всю ширину екрану */
+    position: fixed; /* Фіксована позиція */
+    bottom: 0; /* Прикріпити до нижнього краю екрану */
+    
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Змінено на flex-start для вирівнювання "Зв'язок з нами" зверху */
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    
+    .footer__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .footer__col {
+      flex: 1;
+      margin-right: 20px;
+      margin-bottom: 20px;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      .footer__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+  
+      .footer__nav {
+        ul {
+          list-style: none;
+          padding: 0;
+  
+          li {
+            margin-bottom: 5px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  
+    .icons {
+      display: flex;
+      align-items: center;
+      margin-top: 10px; /* Додано відступ зверху між "Зв'язок з нами" і соціальними мережами */
+  
+      svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+  
+    .footer__bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  }
+  
