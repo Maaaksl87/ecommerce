@@ -1,7 +1,11 @@
 .header {
   position: relative;
-  height: 100vh; // Make the header full height of the viewport
-  overflow: hidden;
+  height: 65vh;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.74)
+  );
 
   &__video {
     position: absolute;
