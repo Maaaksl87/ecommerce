@@ -6,13 +6,13 @@ import {
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/products";
 import Product from "./pages/Product/product";
-import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 const Layout = () => {
   return (
     <div className="App" >
-      <Navbar />
+      <Header />
       <Outlet />
       <Footer />
     </div >
