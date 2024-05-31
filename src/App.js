@@ -3,7 +3,7 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
-import Categories from "./components/Categories/Categories";
+import Home from "./pages/Home/Home"
 import Products from "./pages/Products/products";
 import Product from "./pages/Product/product";
 import Header from "./components/Header/Header";
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Categories />
+        element: <Home />
       },
       {
         path: "/products/:id",
