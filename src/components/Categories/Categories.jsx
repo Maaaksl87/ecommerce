@@ -1,33 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Home.scss";
+import "./Categories.scss";
 
-const Main = () => {
+const Categories = () => {
   return (
     <main className="main">
       <div className="grid-container">
         <div className="grid-item alpinism">
-          <Link to="/alpinism">АЛЬПІНІЗМ</Link>
+          <Link to="/products/1">АЛЬПІНІЗМ</Link>
         </div>
 
         <div className="grid-item tourism">
-          <Link to="/tourism">ТУРИЗМ</Link>
+          <Link to="/products/1">ТУРИЗМ</Link>
         </div>
 
         <div className="grid-item gear">
-          <Link to="/gear">СПОРЯДЖЕННЯ</Link>
+          <Link to="/products/1">СПОРЯДЖЕННЯ</Link>
         </div>
 
         <div className="grid-item accessories">
-          <Link to="/accessories">АКСЕСУАРИ</Link>
+          <Link to="/products/1">АКСЕСУАРИ</Link>
         </div>
 
         <div className="grid-item trailrunning">
-          <Link to="/trailrunning">ТРЕЙЛРАНІНГ</Link>
+          <Link to="/products/1">ТРЕЙЛРАНІНГ</Link>
         </div>
       </div>
     </main>
   );
 };
 
-export default Main;
+export default Categories;

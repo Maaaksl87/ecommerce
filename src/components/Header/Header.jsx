@@ -5,7 +5,13 @@ import SearchIcon from "@mui/icons-material/Search"; // Search icon
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined"; // User icon
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined"; // Heart icon
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined"; // Cart icon
+import HomeIcon from "@mui/icons-material/Home";
+import AcUnitIcon from "@mui/icons-material/AcUnit"; // для спорядження
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import Info from "@mui/icons-material/Info";
+
 import vid from "../../assets/vid.mp4";
+import logo from "../../assets/img/avalanche-logo.png";
 
 import "./Header.scss";
 
@@ -18,21 +24,39 @@ const Header = () => {
       <div className="navbar">
         <div className="wrapper">
           <div className="left">
-            <Link to="/">Avalanche</Link>
+            <Link to="/">
+              <img src={logo} alt="Logo" />
+              Avalanche
+            </Link>
           </div>
           <div className="right">
             <ul>
               <li>
-                <Link to="/">До дому</Link>
+                <Link to="/">
+                  <HomeIcon />
+                  До дому
+                </Link>
               </li>
               <li>
-                <Link to="/equipment">Спорядження</Link>
+                <Link to="/equipment">
+                  {" "}
+                  <AcUnitIcon />
+                  Спорядження
+                </Link>
               </li>
               <li>
-                <Link to="/about">Про сайт</Link>
+                <Link to="/about">
+                  {" "}
+                  <Info />
+                  Про сайт
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Контакти</Link>
+                <Link to="/contact">
+                  {" "}
+                  <ContactMailIcon />
+                  Контакти
+                </Link>
               </li>
             </ul>
             <div className="icons">
