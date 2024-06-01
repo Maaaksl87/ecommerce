@@ -857,6 +857,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::sub-category.sub-category'
     >;
+    type: Attribute.Enumeration<
+      ['\u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0435']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
