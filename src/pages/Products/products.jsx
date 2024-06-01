@@ -52,10 +52,11 @@ const Products = () => {
 
       <div className="right">
         <img
+          className="catImg"
           src="https://plus.unsplash.com/premium_photo-1683850244158-4eff80f5c925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWxwaW5pc218ZW58MHx8MHx8fDA%3D"
           alt="alpinism photo"
         />
-        <List />
+        <List catId={catId} maxPrice={maxPrice} sort={sort} />
       </div>
     </div>
   );
