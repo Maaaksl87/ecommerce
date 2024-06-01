@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import SearchIcon from "@mui/icons-material/Search"; // Search icon
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined"; // User icon
@@ -14,8 +15,10 @@ import vid from "../../assets/vid.mp4";
 import logo from "../../assets/img/avalanche-logo.png";
 
 import "./Header.scss";
+import Cart from "../Cart/Cart";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <header className="header">
       <video className="header__video" autoPlay loop muted>
@@ -63,13 +66,14 @@ const Header = () => {
               <SearchIcon />
               <PersonOutlineOutlinedIcon />
               <FavoriteBorderOutlinedIcon />
-              <div className="cartIcon">
+              <div className="cartIcon" onClick={() => setOpen(!open)}>
                 <ShoppingCartOutlinedIcon />
                 <span>0</span>
               </div>
             </div>
           </div>
         </div>
+        {open && <Cart />}
       </div>
       <div className="banner__content">
         <h1>Welcome to Avalanche</h1>
