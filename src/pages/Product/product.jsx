@@ -7,12 +7,15 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 
 const Product = () => {
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
 
+  const dispathch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   const handleIncrement = () => {
@@ -72,7 +75,21 @@ const Product = () => {
                 <AddIcon />
               </button>
             </div>
-            <button className="add">
+            <button
+              className="add"
+              onClick={() =>
+                dispathch(
+                  addToCart({
+                    id: data.id,
+                    title: data.attributes.title,
+                    desc: data.attributes.desc,
+                    price: data.attributes.price,
+                    img: data.attributes.img.data.attributes.url,
+                    quantity,
+                  })
+                )
+              }
+            >
               <AddShoppingCartIcon /> ДОДАТИ В КОРЗИНУ
             </button>
             <div className="link">
